@@ -5,7 +5,7 @@
 <div class="w3-container" style="padding:0px 0px" id="atas"></div>
 <div class="w3-container" style="padding:0px 0px" id="beranda"></div>
 
-# [Gerbang Ekonomi Masa Depan 丰](https://galrei.github.io)
+# [Gerbang Ekonomi Masa Depan 丰](https://jikibot.github.io)
 <nav>
     <ul>
         <li><a href="#beranda"> Beranda</a></li>
@@ -54,15 +54,15 @@ Berikut adalah beberapa proyek yang pernah saya kerjakan:
 12. Waktu internasional <a href="https://www.timeanddate.com/worldclock/timezone/utc" target="_blank">Current UTC</a>
 13. Alamat Bitcoin P2PKH <a href="https://magiceden.io/ordinals/discover-raresats?walletAddress=1BitcoinX1PpTdriS5pNUh7RSD3eggp6HK" target="_blank">1BitcoinX1PpTdriS5pNUh7RSD3eggp6HK</a> di Magic Eden dengan Balance 14.605 sats pada tanggal 11 Agustus 2024
 14. Rencana membuat NPWP Kafe Gunung
-15. Lab kristal 3D [TABRANIJ](https://galrei.github.io/tabranij/) — Tinggi, Atas, Bawah, Rendah, Awal, Neto, Inti, Julat
+15. Lab kristal 3D [TABRANIJ](https://jikibot.github.io/tabranij/) — Tinggi, Atas, Bawah, Rendah, Awal, Neto, Inti, Julat
 15. Hari ini 17 Agustus 2024 baru dapat kabar kalau akun fb saya sudah menghasilkan $0.02 USD
 16. Yang berharga bagimu, bisa sangat di inginkan orang lain atau sebaliknya.
 17. Hari ini 21 Agustus 2024 baru dapat kabar kalau akun fb saya sudah menghasilkan $0.04 USD
    
 ## Gambar
-<img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fgalrei.github.io">
+<img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fjikibot.github.io">
 
-![Logo GitHub](https://img.shields.io/github/followers/galrei)
+![Logo GitHub](https://img.shields.io/github/followers/jikibot)
 
 <details>
   <summary>
@@ -145,7 +145,7 @@ Mencoba buat token BRC20 <a href="https://ordiscan.com/inscription/10321277" tar
 ```
 
 ![deprecated](https://img.shields.io/badge/Pengingat-8A2BE2) ![luar biasa](https://awesome.re/badge.svg) 
-![](https://img.shields.io/github/followers/galrei) ![](https://img.shields.io/github/stars/galrei/galrei.github.io)
+![](https://img.shields.io/github/followers/jikibot) ![](https://img.shields.io/github/stars/jikibot/jikibot.github.io)
 ![Logo GitHub](https://img.shields.io/badge/Gambar-8A2BE2)
 
 Memulai dari gerbang pengetahuan perdagangan, investasi dan pembangunan

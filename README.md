@@ -60,9 +60,9 @@ Berikut adalah beberapa proyek yang pernah saya kerjakan:
 17. Hari ini 21 Agustus 2024 baru dapat kabar kalau akun fb saya sudah menghasilkan $0.04 USD
    
 ## Gambar
-<img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fjikibot.github.io">
+<img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fsurgabot.github.io">
 
-![Logo GitHub](https://img.shields.io/github/followers/jikibot)
+![Logo GitHub](https://img.shields.io/github/followers/surgabot)
 
 <details>
   <summary>
@@ -145,7 +145,7 @@ Mencoba buat token BRC20 <a href="https://ordiscan.com/inscription/10321277" tar
 ```
 
 ![deprecated](https://img.shields.io/badge/Pengingat-8A2BE2) ![luar biasa](https://awesome.re/badge.svg) 
-![](https://img.shields.io/github/followers/jikibot) ![](https://img.shields.io/github/stars/jikibot/jikibot.github.io)
+![](https://img.shields.io/github/followers/surgabot) ![](https://img.shields.io/github/stars/surgabot/surgabot.github.io)
 ![Logo GitHub](https://img.shields.io/badge/Gambar-8A2BE2)
 
 Memulai dari gerbang pengetahuan perdagangan, investasi dan pembangunan

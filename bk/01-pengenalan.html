@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bab 1 — Pengenalan | TABRANIJ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="top">
+      <a href="index.html">← TABRANIJ Buku Pegangan</a>
+      <a href="https://github.com/surgabot/bk">Repo</a>
+    </nav>
+
+    <div class="badge">BAB 1 · FONDASI</div>
+    <h1>Pengenalan</h1>
+
+    <h2>1.1 Untuk siapa buku ini</h2>
+    <p>Buku pegangan ini dibuat khusus untuk <strong>anggota grup investasi & trading</strong> yang memakai metode <strong>GT (Grafik Tabranij)</strong>.</p>
+    <p>Tujuannya:</p>
+    <ul>
+      <li>Menyamakan bahasa baca grafik di dalam grup</li>
+      <li>Memberi kerangka kerja konsisten lewat kode <strong>TABRANIJ</strong></li>
+      <li>Memudahkan hafalan (titik <strong>TARI</strong>, rentang Atas–Bawah–Neto–Julat)</li>
+      <li>Mengurangi keputusan impulsif dengan aturan yang jelas</li>
+    </ul>
+    <p>Bukan buku “jadi kaya cepat”. Ini buku <strong>cara kerja</strong>.</p>
+
+    <h2>1.2 Apa itu Metode GT dan TABRANIJ</h2>
+    <p><strong>GT</strong> = <strong>Grafik Tabranij</strong>.</p>
+    <p><strong>TABRANIJ</strong> adalah susunan huruf dan kode yang sudah <strong>dipikirkan, ditimbang, dan ditata</strong> agar kalimat, visual, dan bilingual-nya berkesan, sehingga mudah dihafal dan dipakai bersama.</p>
+    <p>Urutan huruf: <strong>T – A – B – R – A – N – I – J</strong></p>
+
+    <h3>Titik — akronim TARI</h3>
+    <table>
+      <thead>
+        <tr><th>Kode</th><th>Komponen</th><th>Keterangan</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>T</strong></td><td>Tinggi</td><td>Harga tertinggi pada suatu periode</td></tr>
+        <tr><td><strong>A</strong></td><td>Awal</td><td>Harga pembukaan (konstanta)</td></tr>
+        <tr><td><strong>R</strong></td><td>Rendah</td><td>Harga terendah pada suatu periode</td></tr>
+        <tr><td><strong>I</strong></td><td>Inti</td><td>Harga saat ini / penutupan (variabel)</td></tr>
+      </tbody>
+    </table>
+    <blockquote>
+      <strong>TARI</strong> = Tinggi · Awal · Rendah · Inti<br>
+      Empat titik harga yang wajib diisi dulu sebelum menghitung rentang.
+    </blockquote>
+
+    <h3>Rentang — ukuran ruang</h3>
+    <table>
+      <thead>
+        <tr><th>Kode</th><th>Komponen</th><th>Rumus</th><th>Keterangan</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>A</strong></td><td>Atas</td><td><code>T − max(Awal, I)</code></td><td>Rentang wick atas</td></tr>
+        <tr><td><strong>B</strong></td><td>Bawah</td><td><code>min(Awal, I) − R</code></td><td>Rentang wick bawah</td></tr>
+        <tr><td><strong>N</strong></td><td>Neto</td><td><code>|I − Awal|</code></td><td>Rentang body</td></tr>
+        <tr><td><strong>J</strong></td><td>Julat</td><td><code>T − R</code></td><td>Rentang penuh periode</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Identitas kunci:</strong></p>
+    <pre>Julat = Atas + Neto + Bawah</pre>
+
+    <h2>1.3 Kenapa perlu kerangka yang sama</h2>
+    <p>Tanpa kerangka, bahasa bias dan entry mudah simpang siur.<br>
+    Dengan TABRANIJ + TARI, semua anggota membaca titik yang sama, menghitung rentang yang sama, dan menyimpulkan bias dari <code>I</code> vs <code>Awal</code>.</p>
+
+    <h2>1.4 Cara memakai buku ini</h2>
+    <ol>
+      <li>Hafalkan <strong>TARI</strong> (titik) dan empat <strong>rentang</strong>.</li>
+      <li>Latihan di tool Tabranij Pro.</li>
+      <li>Lanjut Bagian II (multi-candle & timeframe).</li>
+      <li>Bagian III (entry, exit, risiko).</li>
+      <li>Checklist harian setiap sesi.</li>
+    </ol>
+
+    <h2>1.5 Batasan</h2>
+    <ul>
+      <li>Alat bantu baca grafik, bukan jaminan profit.</li>
+      <li>Market bisa invalidasi setup kapan saja.</li>
+      <li>Disiplin risiko lebih penting daripada menebak arah.</li>
+    </ul>
+
+    <div class="nav-bottom">
+      <a href="index.html">← Daftar Isi</a>
+      <a href="02-konsep-gt.html">Bab 2 — Konsep Metode GT →</a>
+    </div>
+
+    <footer>
+      <p><a href="index.html">TABRANIJ</a> · Metode GT · <a href="https://github.com/surgabot">Surga Bot</a></p>
+    </footer>
+  </div>
+</body>
+</html>

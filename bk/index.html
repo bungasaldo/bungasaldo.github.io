@@ -9,7 +9,6 @@
 </head>
 <body>
   <div class="layout">
-    <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="sidebar-brand">
         <a href="index.html">TABRANIJ</a>
@@ -18,46 +17,67 @@
 
       <div class="sidebar-section">
         <div class="sidebar-section-title">Beranda</div>
-        <a href="index.html" class="active">Ringkasan</a>
+        <div class="sidebar-section-links" style="display:block">
+          <a href="index.html" class="active">Ringkasan</a>
+        </div>
       </div>
 
-      <div class="sidebar-section">
-        <div class="sidebar-section-title">I · Fondasi</div>
-        <a href="01-pengenalan.html">1. Pengenalan</a>
-        <a href="02-konsep-gt.html">2. Konsep Metode GT</a>
-        <a href="03-parameter-tabranij.html">3. Parameter TABRANIJ</a>
+      <div class="sidebar-section" data-section="fondasi">
+        <button type="button" class="sidebar-section-title">
+          I · Fondasi <span class="chevron">▶</span>
+        </button>
+        <div class="sidebar-section-links">
+          <a href="01-pengenalan.html">1. Pengenalan</a>
+          <a href="02-konsep-gt.html">2. Konsep Metode GT</a>
+          <a href="03-parameter-tabranij.html">3. Parameter TABRANIJ</a>
+        </div>
       </div>
 
-      <div class="sidebar-section">
-        <div class="sidebar-section-title">II · Membaca Grafik</div>
-        <a href="04-membaca-candle.html">4. Membaca Candle</a>
-        <a href="05-bias-arah-struktur.html">5. Bias, Arah, Struktur</a>
-        <a href="06-multi-candle-timeframe.html">6. Multi-Candle & TF</a>
+      <div class="sidebar-section" data-section="grafik">
+        <button type="button" class="sidebar-section-title">
+          II · Membaca Grafik <span class="chevron">▶</span>
+        </button>
+        <div class="sidebar-section-links">
+          <a href="04-membaca-candle.html">4. Membaca Candle</a>
+          <a href="05-bias-arah-struktur.html">5. Bias, Arah, Struktur</a>
+          <a href="06-multi-candle-timeframe.html">6. Multi-Candle & TF</a>
+        </div>
       </div>
 
-      <div class="sidebar-section">
-        <div class="sidebar-section-title">III · Eksekusi</div>
-        <a href="07-entry-exit.html">7. Entry & Exit</a>
-        <a href="08-manajemen-risiko.html">8. Manajemen Risiko</a>
-        <a href="09-contoh-kasus.html">9. Contoh Kasus</a>
+      <div class="sidebar-section" data-section="eksekusi">
+        <button type="button" class="sidebar-section-title">
+          III · Eksekusi <span class="chevron">▶</span>
+        </button>
+        <div class="sidebar-section-links">
+          <a href="07-entry-exit.html">7. Entry & Exit</a>
+          <a href="08-manajemen-risiko.html">8. Manajemen Risiko</a>
+          <a href="09-contoh-kasus.html">9. Contoh Kasus</a>
+        </div>
       </div>
 
-      <div class="sidebar-section">
-        <div class="sidebar-section-title">IV · Alat & Disiplin</div>
-        <a href="10-tool-visualizer.html">10. Tool Visualizer</a>
-        <a href="11-checklist-harian.html">11. Checklist Harian</a>
-        <a href="12-glosarium.html">12. Glosarium</a>
+      <div class="sidebar-section" data-section="alat">
+        <button type="button" class="sidebar-section-title">
+          IV · Alat & Disiplin <span class="chevron">▶</span>
+        </button>
+        <div class="sidebar-section-links">
+          <a href="10-tool-visualizer.html">10. Tool Visualizer</a>
+          <a href="11-checklist-harian.html">11. Checklist Harian</a>
+          <a href="12-glosarium.html">12. Glosarium</a>
+        </div>
       </div>
 
-      <div class="sidebar-section">
-        <div class="sidebar-section-title">V · Finansial</div>
-        <a href="13-nasihat-investasi.html">13. Nasihat Investasi</a>
-        <a href="14-jurnal-trading.html">14. Jurnal Trading</a>
-        <a href="15-mengelola-keuntungan.html">15. Mengelola Keuntungan</a>
+      <div class="sidebar-section" data-section="finansial">
+        <button type="button" class="sidebar-section-title">
+          V · Finansial <span class="chevron">▶</span>
+        </button>
+        <div class="sidebar-section-links">
+          <a href="13-nasihat-investasi.html">13. Nasihat Investasi</a>
+          <a href="14-jurnal-trading.html">14. Jurnal Trading</a>
+          <a href="15-mengelola-keuntungan.html">15. Mengelola Keuntungan</a>
+        </div>
       </div>
     </aside>
 
-    <!-- MAIN -->
     <main class="main">
       <div class="hero">
         <div class="badge">METODE GT · GRAFIK TABRANIJ</div>
@@ -65,14 +85,8 @@
         <p style="color: var(--muted); margin-bottom: 0.5rem;">Buku Pegangan Grup Investasi & Trading · Bab 1–15</p>
 
         <div class="letters">
-          <div class="letter">T</div>
-          <div class="letter">A</div>
-          <div class="letter">B</div>
-          <div class="letter">R</div>
-          <div class="letter">A</div>
-          <div class="letter">N</div>
-          <div class="letter">I</div>
-          <div class="letter">J</div>
+          <div class="letter">T</div><div class="letter">A</div><div class="letter">B</div><div class="letter">R</div>
+          <div class="letter">A</div><div class="letter">N</div><div class="letter">I</div><div class="letter">J</div>
         </div>
 
         <p style="color: var(--muted); max-width: 480px; margin: 0 auto 1.5rem;">
@@ -83,9 +97,7 @@
       <div class="card">
         <h2 style="margin-top:0; color: var(--accent2); font-size: 1.1rem;">Parameter TABRANIJ</h2>
         <table>
-          <thead>
-            <tr><th>Huruf</th><th>Nama</th><th>Arti</th></tr>
-          </thead>
+          <thead><tr><th>Huruf</th><th>Nama</th><th>Arti</th></tr></thead>
           <tbody>
             <tr><td><strong>T</strong></td><td>Tinggi</td><td>Harga tertinggi periode</td></tr>
             <tr><td><strong>A</strong></td><td>Atas</td><td>max(Awal, Inti) — tepi atas tubuh</td></tr>
@@ -103,8 +115,8 @@
       </div>
 
       <p style="color: var(--muted); font-size: 0.95rem;">
-        Pilih bab di sidebar kiri untuk mulai membaca. Atau mulai dari
-        <a href="01-pengenalan.html" style="color: var(--accent2);">Bab 1 — Pengenalan</a>.
+        Klik bagian di sidebar kiri untuk membuka daftar bab, lalu pilih bab yang ingin dibaca.
+        Atau mulai dari <a href="01-pengenalan.html" style="color: var(--accent2);">Bab 1 — Pengenalan</a>.
       </p>
 
       <p style="margin-top: 1.5rem;">
@@ -117,5 +129,21 @@
       </footer>
     </main>
   </div>
+
+  <script>
+    document.querySelectorAll('.sidebar-section-title').forEach(btn => {
+      if (btn.tagName !== 'BUTTON') return;
+      btn.addEventListener('click', () => {
+        const section = btn.closest('.sidebar-section');
+        section.classList.toggle('open');
+      });
+    });
+    // Auto-open section that contains the active link
+    const active = document.querySelector('.sidebar a.active');
+    if (active) {
+      const sec = active.closest('.sidebar-section');
+      if (sec) sec.classList.add('open');
+    }
+  </script>
 </body>
 </html>

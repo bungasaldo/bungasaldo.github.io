@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bab 4 — Membaca Candle dengan GT | TABRANIJ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="top">
+      <a href="index.html">← TABRANIJ Buku Pegangan</a>
+      <a href="https://github.com/surgabot/bk">Repo</a>
+    </nav>
+
+    <div class="badge">BAB 4 · MEMBACA GRAFIK</div>
+    <h1>Membaca Candle dengan GT</h1>
+    <blockquote>Satu candle = satu “kalimat” TABRANIJ.<br>Baca <strong>titik</strong> dulu (TARI), lalu ukur <strong>rentang</strong>, baru simpulkan bias.</blockquote>
+
+    <h2>4.1 Urutan baca yang disarankan</h2>
+    <p>Jangan langsung menebak “bullish/bearish” dari warna saja. Ikuti urutan:</p>
+    <pre>1. TARI   →  Tinggi · Awal · Rendah · Inti
+2. Rentang →  Atas · Neto · Bawah · Julat
+3. Cek     →  Atas + Neto + Bawah ≟ Julat
+4. Bias    →  Inti ≷ Awal
+5. Bentuk  →  proporsi wick vs body</pre>
+    <blockquote><strong>Pasak dulu, ukur ruang, cek jumlah, baru arah.</strong></blockquote>
+
+    <h2>4.2 Memetakan OHLC ke TARI</h2>
+    <table>
+      <thead><tr><th>OHLC klasik</th><th>Kode GT</th><th>Nama</th></tr></thead>
+      <tbody>
+        <tr><td>High</td><td><strong>T</strong></td><td>Tinggi</td></tr>
+        <tr><td>Open</td><td><strong>Awal</strong></td><td>Awal</td></tr>
+        <tr><td>Low</td><td><strong>R</strong></td><td>Rendah</td></tr>
+        <tr><td>Close / harga sekarang</td><td><strong>I</strong></td><td>Inti</td></tr>
+      </tbody>
+    </table>
+    <ul>
+      <li><strong>Inti</strong> = harga penutupan jika candle selesai; atau harga saat ini jika masih berjalan.</li>
+      <li><strong>Awal</strong> tetap (konstanta) sepanjang periode yang sama.</li>
+      <li>Warna candle <strong>bukan</strong> definisi utama; definisi utama adalah <strong>I vs Awal</strong>.</li>
+    </ul>
+
+    <h2>4.3 Menghitung rentang</h2>
+    <pre>Atas  = T − max(Awal, I)     → wick atas
+Bawah = min(Awal, I) − R     → wick bawah
+Neto  = |I − Awal|           → lebar body
+Julat = T − R                → tinggi total</pre>
+    <p><strong>Identitas wajib:</strong> <code>Julat = Atas + Neto + Bawah</code></p>
+
+    <h2>4.4 Membaca proporsi</h2>
+    <table>
+      <thead><tr><th>Pola proporsi</th><th>Ciri rentang</th><th>Bacaan ringkas</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Body dominan</strong></td><td>Neto besar vs Atas & Bawah</td><td>Keputusan harga kuat ke arah bias</td></tr>
+        <tr><td><strong>Doji</strong></td><td>Neto ≈ 0</td><td>Keseimbangan / keraguan</td></tr>
+        <tr><td><strong>Wick atas panjang</strong></td><td>Atas besar</td><td>Penolakan di zona tinggi</td></tr>
+        <tr><td><strong>Wick bawah panjang</strong></td><td>Bawah besar</td><td>Penolakan di zona rendah</td></tr>
+        <tr><td><strong>Hammer-like</strong></td><td>Bawah ≫ Atas</td><td>Tekanan beli dari bawah</td></tr>
+        <tr><td><strong>Shooting-star-like</strong></td><td>Atas ≫ Bawah</td><td>Tekanan jual dari atas</td></tr>
+        <tr><td><strong>Marubozu-like</strong></td><td>Atas ≈ 0 dan Bawah ≈ 0</td><td>Body hampir penuh Julat</td></tr>
+      </tbody>
+    </table>
+    <blockquote>Nama pola klasik boleh dipakai sebagai bahasa sekunder. Bahasa primer grup: <strong>TARI + Atas/Neto/Bawah/Julat</strong>.</blockquote>
+
+    <h2>4.5 Contoh numerik</h2>
+    <h3>Contoh A — bias naik, body sedang</h3>
+    <pre>T=105, Awal=100, R=98, I=103
+Atas=2, Bawah=2, Neto=3, Julat=7 → naik</pre>
+
+    <h3>Contoh B — doji</h3>
+    <pre>T=110, Awal=105, R=100, I=105
+Atas=5, Bawah=5, Neto=0, Julat=10 → netral</pre>
+
+    <h3>Contoh C — wick bawah dominan</h3>
+    <pre>T=102, Awal=101, R=90, I=100
+Atas=1, Bawah=10, Neto=1, Julat=12 → turun lemah</pre>
+
+    <h2>4.6 Checklist baca satu candle</h2>
+    <ul>
+      <li>T, Awal, R, I tercatat</li>
+      <li>Atas, Bawah, Neto, Julat dihitung</li>
+      <li>Identitas Atas + Neto + Bawah = Julat</li>
+      <li>Bias: naik / turun / netral</li>
+      <li>Proporsi dicatat</li>
+    </ul>
+
+    <h2>4.7 Kesalahan umum</h2>
+    <table>
+      <thead><tr><th>Kesalahan</th><th>Perbaikan</th></tr></thead>
+      <tbody>
+        <tr><td>Hanya lihat warna</td><td>Pakai I vs Awal</td></tr>
+        <tr><td>Lupa max/min di rumus</td><td>Selalu max(Awal,I) dan min(Awal,I)</td></tr>
+        <tr><td>Menyamakan “A”</td><td>Sebut Awal atau Atas</td></tr>
+        <tr><td>Langsung entry dari satu candle</td><td>Satu candle = informasi, bukan setup</td></tr>
+      </tbody>
+    </table>
+
+    <div class="nav-bottom">
+      <a href="03-parameter-tabranij.html">← Bab 3 — Parameter TABRANIJ</a>
+      <a href="05-bias-arah-struktur.html">Bab 5 — Bias, Arah, dan Struktur →</a>
+    </div>
+
+    <footer>
+      <p><a href="index.html">TABRANIJ</a> · Metode GT · <a href="https://github.com/surgabot">Surga Bot</a></p>
+    </footer>
+  </div>
+</body>
+</html>

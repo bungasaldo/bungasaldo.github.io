@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bab 3 — Parameter TABRANIJ | TABRANIJ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="top">
+      <a href="index.html">← TABRANIJ Buku Pegangan</a>
+      <a href="https://github.com/surgabot/bk">Repo</a>
+    </nav>
+
+    <div class="badge">BAB 3 · FONDASI</div>
+    <h1>Parameter TABRANIJ</h1>
+    <blockquote>Definisi final: titik <strong>TARI</strong> dan empat <strong>rentang</strong>.</blockquote>
+
+    <h2>3.1 Asal-usul nama</h2>
+    <p><strong>TABRANIJ</strong> disusun agar mudah dihafal (kalimat, visual, bilingual).<br>
+    Empat <strong>titik</strong> di dalamnya diikat lagi sebagai akronim <strong>TARI</strong>:</p>
+    <pre>TARI = Tinggi · Awal · Rendah · Inti</pre>
+
+    <h2>3.2 Tabel master final</h2>
+    <h3>A. Titik (posisi harga) — TARI</h3>
+    <table>
+      <thead><tr><th>Urutan</th><th>Kode</th><th>Komponen</th><th>Keterangan</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><strong>T</strong></td><td>Tinggi</td><td>Harga tertinggi periode</td></tr>
+        <tr><td>2</td><td><strong>A</strong></td><td>Awal</td><td>Harga pembukaan periode</td></tr>
+        <tr><td>3</td><td><strong>R</strong></td><td>Rendah</td><td>Harga terendah periode</td></tr>
+        <tr><td>4</td><td><strong>I</strong></td><td>Inti</td><td>Harga sekarang / penutupan</td></tr>
+      </tbody>
+    </table>
+
+    <h3>B. Rentang (ukuran ruang)</h3>
+    <table>
+      <thead><tr><th>Kode</th><th>Komponen</th><th>Rumus</th><th>Keterangan</th></tr></thead>
+      <tbody>
+        <tr><td><strong>A</strong></td><td>Atas</td><td><code>T − max(Awal, I)</code></td><td>Panjang wick atas</td></tr>
+        <tr><td><strong>B</strong></td><td>Bawah</td><td><code>min(Awal, I) − R</code></td><td>Panjang wick bawah</td></tr>
+        <tr><td><strong>N</strong></td><td>Neto</td><td><code>|I − Awal|</code></td><td>Lebar body</td></tr>
+        <tr><td><strong>J</strong></td><td>Julat</td><td><code>T − R</code></td><td>Jangkauan penuh</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Identitas:</strong></p>
+    <pre>Julat = Atas + Neto + Bawah</pre>
+
+    <h2>3.3 Dua huruf “A”</h2>
+    <table>
+      <thead><tr><th>Sebutan</th><th>Jenis</th><th>Makna</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Awal</strong></td><td>Titik (TARI)</td><td>Open / konstanta</td></tr>
+        <tr><td><strong>Atas</strong></td><td>Rentang</td><td>Wick atas</td></tr>
+      </tbody>
+    </table>
+    <p>Selalu sebut <strong>“Awal”</strong> atau <strong>“Atas”</strong>, jangan hanya “A”.</p>
+
+    <h2>3.4 Urutan kerja praktis</h2>
+    <ol>
+      <li>Catat <strong>TARI</strong>: T, Awal, R, Inti</li>
+      <li>Hitung rentang:
+        <ul>
+          <li><code>Atas = T − max(Awal, I)</code></li>
+          <li><code>Bawah = min(Awal, I) − R</code></li>
+          <li><code>Neto = |I − Awal|</code></li>
+          <li><code>Julat = T − R</code></li>
+        </ul>
+      </li>
+      <li>Verifikasi: <code>Atas + Neto + Bawah ≟ Julat</code></li>
+      <li>Bias: <code>I ≥ Awal</code> → naik; <code>I < Awal</code> → turun</li>
+    </ol>
+
+    <h2>3.5 Asosiasi hafalan</h2>
+    <table>
+      <thead><tr><th>Kelompok</th><th>Isi</th><th>Gambar mental</th></tr></thead>
+      <tbody>
+        <tr><td><strong>TARI</strong></td><td>Tinggi, Awal, Rendah, Inti</td><td>Empat “pasak” harga</td></tr>
+        <tr><td>Rentang luar</td><td>Atas, Bawah</td><td>Wick atas & bawah</td></tr>
+        <tr><td>Rentang isi</td><td>Neto</td><td>Ketebalan body</td></tr>
+        <tr><td>Rentang total</td><td>Julat</td><td>Seluruh tinggi candle</td></tr>
+      </tbody>
+    </table>
+    <blockquote>Isi <strong>TARI</strong> dulu; lalu ukur <strong>Atas–Neto–Bawah</strong>; jumlahnya wajib sama dengan <strong>Julat</strong>.</blockquote>
+
+    <h2>3.6 Checklist satu periode</h2>
+    <p><strong>Titik (TARI)</strong></p>
+    <ul>
+      <li>Tinggi (T)</li>
+      <li>Awal</li>
+      <li>Rendah (R)</li>
+      <li>Inti (I)</li>
+    </ul>
+    <p><strong>Rentang</strong></p>
+    <ul>
+      <li>Atas = <code>T − max(Awal, I)</code></li>
+      <li>Bawah = <code>min(Awal, I) − R</code></li>
+      <li>Neto = <code>|I − Awal|</code></li>
+      <li>Julat = <code>T − R</code></li>
+      <li><code>Atas + Neto + Bawah = Julat</code></li>
+    </ul>
+    <p><strong>Bias</strong>: Inti vs Awal → naik / turun</p>
+
+    <h2>3.7 Preset tool (latihan)</h2>
+    <table>
+      <thead><tr><th>Preset</th><th>Baca TABRANIJ</th></tr></thead>
+      <tbody>
+        <tr><td>Bullish</td><td>I ≥ Awal; Neto = lebar body naik</td></tr>
+        <tr><td>Bearish</td><td>I < Awal; Neto = lebar body turun</td></tr>
+        <tr><td>Doji</td><td>Neto ≈ 0 (Awal ≈ Inti)</td></tr>
+        <tr><td>Long Wick</td><td>Atas dan/atau Bawah besar relatif Neto</td></tr>
+        <tr><td>Hammer</td><td>Bawah dominan (wick bawah panjang)</td></tr>
+        <tr><td>Random</td><td>Latihan acak</td></tr>
+      </tbody>
+    </table>
+
+    <div class="nav-bottom">
+      <a href="02-konsep-gt.html">← Bab 2 — Konsep Metode GT</a>
+      <a href="04-membaca-candle.html">Bab 4 — Membaca Candle dengan GT →</a>
+    </div>
+
+    <footer>
+      <p><a href="index.html">TABRANIJ</a> · Metode GT · <a href="https://github.com/surgabot">Surga Bot</a></p>
+    </footer>
+  </div>
+</body>
+</html>

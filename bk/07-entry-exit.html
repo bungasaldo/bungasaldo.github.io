@@ -3,77 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bab 7 — Setup Entry & Exit | TABRANIJ</title>
+  <title>Bab 7 — Entry & Exit | TABRANIJ</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <nav class="top">
-      <a href="index.html">← TABRANIJ Buku Pegangan</a>
-      <a href="https://github.com/surgabot/bk">Repo</a>
-    </nav>
-    <div class="badge">BAB 7 · EKSEKUSI</div>
-    <h1>Setup Entry & Exit</h1>
-    <blockquote>Entry bukan tebakan warna candle.<br>Entry = <strong>konteks</strong> + <strong>trigger</strong> + <strong>invalidation</strong> yang tertulis.</blockquote>
-
-    <h2>7.1 Tiga syarat sebelum entry</h2>
-    <table>
-      <thead><tr><th>Syarat</th><th>Isi</th></tr></thead>
-      <tbody>
-        <tr><td><strong>1. Konteks</strong></td><td>Bias + arah + struktur sudah jelas</td></tr>
-        <tr><td><strong>2. Zona</strong></td><td>Harga di area yang masuk akal</td></tr>
-        <tr><td><strong>3. Trigger</strong></td><td>Perilaku candle (TARI + rentang) yang mengonfirmasi</td></tr>
-      </tbody>
-    </table>
-
-    <h2>7.2 Jenis setup</h2>
-    <h3>A. Continuation (ikut arah HTF)</h3>
-    <ol>
-      <li>HTF bias & struktur mendukung</li>
-      <li>MTF/LTF pullback</li>
-      <li>Trigger: candle kembali searah HTF</li>
-      <li>Invalidation: di luar R (long) atau T (short)</li>
-    </ol>
-
-    <h3>B. Reversal di level</h3>
-    <ol>
-      <li>Level HTF jelas</li>
-      <li>Penolakan: Atas atau Bawah membesar</li>
-      <li>Trigger: close kembali ke dalam range</li>
-      <li>Invalidation: I close di luar level dengan body meyakinkan</li>
-    </ol>
-
-    <h3>C. Break & hold</h3>
-    <ol>
-      <li>I menembus level</li>
-      <li>Candle berikutnya: Awal bertahan di sisi break</li>
-      <li>Invalidation: close kembali ke dalam range lama</li>
-    </ol>
-
-    <h2>7.3 Exit — tiga jenis</h2>
-    <table>
-      <thead><tr><th>Jenis</th><th>Fungsi</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Invalidation (SL)</strong></td><td>Ide batal</td></tr>
-        <tr><td><strong>Target (TP)</strong></td><td>Ambil untung terencana</td></tr>
-        <tr><td><strong>Time / structure exit</strong></td><td>Konteks berubah</td></tr>
-      </tbody>
-    </table>
-
-    <h2>7.4 Checklist pre-entry</h2>
-    <ul>
-      <li>TF konteks & TF trigger tertulis</li>
-      <li>Bias / arah / struktur satu kalimat</li>
-      <li>Zona jelas</li>
-      <li>Harga entry, SL, TP1 tertulis</li>
-      <li>Risiko per trade sesuai Bab 8</li>
-    </ul>
-
-    <div class="nav-bottom">
-      <a href="06-multi-candle-timeframe.html">← Bab 6</a>
-      <a href="08-manajemen-risiko.html">Bab 8 — Manajemen Risiko →</a>
-    </div>
-    <footer><p><a href="index.html">TABRANIJ</a> · Metode GT · <a href="https://github.com/surgabot">Surga Bot</a></p></footer>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><a href="index.html">TABRANIJ</a><span>Buku Pegangan Metode GT</span></div>
+      <div class="sidebar-section"><div class="sidebar-section-title">Beranda</div><div class="sidebar-section-links" style="display:block"><a href="index.html">Ringkasan</a></div></div>
+      <div class="sidebar-section"><button type="button" class="sidebar-section-title">I · Fondasi <span class="chevron">▶</span></button><div class="sidebar-section-links"><a href="01-pengenalan.html">1. Pengenalan</a><a href="02-konsep-gt.html">2. Konsep Metode GT</a><a href="03-parameter-tabranij.html">3. Parameter TABRANIJ</a></div></div>
+      <div class="sidebar-section"><button type="button" class="sidebar-section-title">II · Membaca Grafik <span class="chevron">▶</span></button><div class="sidebar-section-links"><a href="04-membaca-candle.html">4. Membaca Candle</a><a href="05-bias-arah-struktur.html">5. Bias, Arah, Struktur</a><a href="06-multi-candle-timeframe.html">6. Multi-Candle & TF</a></div></div>
+      <div class="sidebar-section"><button type="button" class="sidebar-section-title">III · Eksekusi <span class="chevron">▶</span></button><div class="sidebar-section-links"><a href="07-entry-exit.html" class="active">7. Entry & Exit</a><a href="08-manajemen-risiko.html">8. Manajemen Risiko</a><a href="09-contoh-kasus.html">9. Contoh Kasus</a></div></div>
+      <div class="sidebar-section"><button type="button" class="sidebar-section-title">IV · Alat & Disiplin <span class="chevron">▶</span></button><div class="sidebar-section-links"><a href="10-tool-visualizer.html">10. Tool Visualizer</a><a href="11-checklist-harian.html">11. Checklist Harian</a><a href="12-glosarium.html">12. Glosarium</a></div></div>
+      <div class="sidebar-section"><button type="button" class="sidebar-section-title">V · Finansial <span class="chevron">▶</span></button><div class="sidebar-section-links"><a href="13-nasihat-investasi.html">13. Nasihat Investasi</a><a href="14-jurnal-trading.html">14. Jurnal Trading</a><a href="15-mengelola-keuntungan.html">15. Mengelola Keuntungan</a></div></div>
+    </aside>
+    <main class="main">
+      <div class="badge">BAB 7 · EKSEKUSI</div>
+      <h1>Setup Entry & Exit</h1>
+      <blockquote>Entry = <strong>konteks</strong> + <strong>trigger</strong> + <strong>invalidation</strong> tertulis.</blockquote>
+      <h2>7.1 Tiga syarat</h2>
+      <ol><li>Konteks (bias + arah + struktur) jelas</li><li>Zona masuk akal</li><li>Trigger candle mengonfirmasi</li></ol>
+      <h2>7.2 Jenis setup</h2>
+      <ul>
+        <li><strong>Continuation</strong> — ikut HTF setelah pullback</li>
+        <li><strong>Reversal di level</strong> — penolakan + konfirmasi</li>
+        <li><strong>Break & hold</strong> — tembus lalu Awal bertahan di sisi break</li>
+      </ul>
+      <h2>7.3 Exit</h2>
+      <table><thead><tr><th>Jenis</th><th>Fungsi</th></tr></thead><tbody>
+        <tr><td>Invalidation (SL)</td><td>Ide batal</td></tr>
+        <tr><td>Target (TP)</td><td>Ambil untung</td></tr>
+        <tr><td>Structure exit</td><td>Konteks berubah</td></tr>
+      </tbody></table>
+      <div class="nav-bottom"><a href="06-multi-candle-timeframe.html">← Bab 6</a><a href="08-manajemen-risiko.html">Bab 8 →</a></div>
+      <footer class="page-footer"><p><a href="index.html">TABRANIJ</a> · Metode GT · Surga Bot</p></footer>
+    </main>
   </div>
+  <script>
+    document.querySelectorAll('.sidebar-section-title').forEach(btn => { if (btn.tagName !== 'BUTTON') return; btn.addEventListener('click', () => btn.closest('.sidebar-section').classList.toggle('open')); });
+    const active = document.querySelector('.sidebar a.active'); if (active) { const sec = active.closest('.sidebar-section'); if (sec) sec.classList.add('open'); }
+  </script>
 </body>
 </html>

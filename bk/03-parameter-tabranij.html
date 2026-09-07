@@ -7,122 +7,50 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <nav class="top">
-      <a href="index.html">← TABRANIJ Buku Pegangan</a>
-      <a href="https://github.com/surgabot/bk">Repo</a>
-    </nav>
-
-    <div class="badge">BAB 3 · FONDASI</div>
-    <h1>Parameter TABRANIJ</h1>
-    <blockquote>Definisi final: titik <strong>TARI</strong> dan empat <strong>rentang</strong>.</blockquote>
-
-    <h2>3.1 Asal-usul nama</h2>
-    <p><strong>TABRANIJ</strong> disusun agar mudah dihafal (kalimat, visual, bilingual).<br>
-    Empat <strong>titik</strong> di dalamnya diikat lagi sebagai akronim <strong>TARI</strong>:</p>
-    <pre>TARI = Tinggi · Awal · Rendah · Inti</pre>
-
-    <h2>3.2 Tabel master final</h2>
-    <h3>A. Titik (posisi harga) — TARI</h3>
-    <table>
-      <thead><tr><th>Urutan</th><th>Kode</th><th>Komponen</th><th>Keterangan</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td><strong>T</strong></td><td>Tinggi</td><td>Harga tertinggi periode</td></tr>
-        <tr><td>2</td><td><strong>A</strong></td><td>Awal</td><td>Harga pembukaan periode</td></tr>
-        <tr><td>3</td><td><strong>R</strong></td><td>Rendah</td><td>Harga terendah periode</td></tr>
-        <tr><td>4</td><td><strong>I</strong></td><td>Inti</td><td>Harga sekarang / penutupan</td></tr>
-      </tbody>
-    </table>
-
-    <h3>B. Rentang (ukuran ruang)</h3>
-    <table>
-      <thead><tr><th>Kode</th><th>Komponen</th><th>Rumus</th><th>Keterangan</th></tr></thead>
-      <tbody>
-        <tr><td><strong>A</strong></td><td>Atas</td><td><code>T − max(Awal, I)</code></td><td>Panjang wick atas</td></tr>
-        <tr><td><strong>B</strong></td><td>Bawah</td><td><code>min(Awal, I) − R</code></td><td>Panjang wick bawah</td></tr>
-        <tr><td><strong>N</strong></td><td>Neto</td><td><code>|I − Awal|</code></td><td>Lebar body</td></tr>
-        <tr><td><strong>J</strong></td><td>Julat</td><td><code>T − R</code></td><td>Jangkauan penuh</td></tr>
-      </tbody>
-    </table>
-    <p><strong>Identitas:</strong></p>
-    <pre>Julat = Atas + Neto + Bawah</pre>
-
-    <h2>3.3 Dua huruf “A”</h2>
-    <table>
-      <thead><tr><th>Sebutan</th><th>Jenis</th><th>Makna</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Awal</strong></td><td>Titik (TARI)</td><td>Open / konstanta</td></tr>
-        <tr><td><strong>Atas</strong></td><td>Rentang</td><td>Wick atas</td></tr>
-      </tbody>
-    </table>
-    <p>Selalu sebut <strong>“Awal”</strong> atau <strong>“Atas”</strong>, jangan hanya “A”.</p>
-
-    <h2>3.4 Urutan kerja praktis</h2>
-    <ol>
-      <li>Catat <strong>TARI</strong>: T, Awal, R, Inti</li>
-      <li>Hitung rentang:
-        <ul>
-          <li><code>Atas = T − max(Awal, I)</code></li>
-          <li><code>Bawah = min(Awal, I) − R</code></li>
-          <li><code>Neto = |I − Awal|</code></li>
-          <li><code>Julat = T − R</code></li>
-        </ul>
-      </li>
-      <li>Verifikasi: <code>Atas + Neto + Bawah ≟ Julat</code></li>
-      <li>Bias: <code>I ≥ Awal</code> → naik; <code>I < Awal</code> → turun</li>
-    </ol>
-
-    <h2>3.5 Asosiasi hafalan</h2>
-    <table>
-      <thead><tr><th>Kelompok</th><th>Isi</th><th>Gambar mental</th></tr></thead>
-      <tbody>
-        <tr><td><strong>TARI</strong></td><td>Tinggi, Awal, Rendah, Inti</td><td>Empat “pasak” harga</td></tr>
-        <tr><td>Rentang luar</td><td>Atas, Bawah</td><td>Wick atas & bawah</td></tr>
-        <tr><td>Rentang isi</td><td>Neto</td><td>Ketebalan body</td></tr>
-        <tr><td>Rentang total</td><td>Julat</td><td>Seluruh tinggi candle</td></tr>
-      </tbody>
-    </table>
-    <blockquote>Isi <strong>TARI</strong> dulu; lalu ukur <strong>Atas–Neto–Bawah</strong>; jumlahnya wajib sama dengan <strong>Julat</strong>.</blockquote>
-
-    <h2>3.6 Checklist satu periode</h2>
-    <p><strong>Titik (TARI)</strong></p>
-    <ul>
-      <li>Tinggi (T)</li>
-      <li>Awal</li>
-      <li>Rendah (R)</li>
-      <li>Inti (I)</li>
-    </ul>
-    <p><strong>Rentang</strong></p>
-    <ul>
-      <li>Atas = <code>T − max(Awal, I)</code></li>
-      <li>Bawah = <code>min(Awal, I) − R</code></li>
-      <li>Neto = <code>|I − Awal|</code></li>
-      <li>Julat = <code>T − R</code></li>
-      <li><code>Atas + Neto + Bawah = Julat</code></li>
-    </ul>
-    <p><strong>Bias</strong>: Inti vs Awal → naik / turun</p>
-
-    <h2>3.7 Preset tool (latihan)</h2>
-    <table>
-      <thead><tr><th>Preset</th><th>Baca TABRANIJ</th></tr></thead>
-      <tbody>
-        <tr><td>Bullish</td><td>I ≥ Awal; Neto = lebar body naik</td></tr>
-        <tr><td>Bearish</td><td>I < Awal; Neto = lebar body turun</td></tr>
-        <tr><td>Doji</td><td>Neto ≈ 0 (Awal ≈ Inti)</td></tr>
-        <tr><td>Long Wick</td><td>Atas dan/atau Bawah besar relatif Neto</td></tr>
-        <tr><td>Hammer</td><td>Bawah dominan (wick bawah panjang)</td></tr>
-        <tr><td>Random</td><td>Latihan acak</td></tr>
-      </tbody>
-    </table>
-
-    <div class="nav-bottom">
-      <a href="02-konsep-gt.html">← Bab 2 — Konsep Metode GT</a>
-      <a href="04-membaca-candle.html">Bab 4 — Membaca Candle dengan GT →</a>
-    </div>
-
-    <footer>
-      <p><a href="index.html">TABRANIJ</a> · Metode GT · <a href="https://github.com/surgabot">Surga Bot</a></p>
-    </footer>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><a href="index.html">TABRANIJ</a><span>Buku Pegangan Metode GT</span></div>
+      <div class="sidebar-section"><div class="sidebar-section-title">Beranda</div><div class="sidebar-section-links" style="display:block"><a href="index.html">Ringkasan</a></div></div>
+      <div class="sidebar-section" data-section="fondasi"><button type="button" class="sidebar-section-title">I · Fondasi <span class="chevron">▶</span></button><div class="sidebar-section-links"><a href="01-pengenalan.html">1. Pengenalan</a><a href="02-konsep-gt.html">2. Konsep Metode GT</a><a href="03-parameter-tabranij.html" class="active">3. Parameter TABRANIJ</a></div></div>
+      <div class="sidebar-section" data-section="grafik"><button type="button" class="sidebar-section-title">II · Membaca Grafik <span class="chevron">▶</span></button><div class="sidebar-section-links"><a href="04-membaca-candle.html">4. Membaca Candle</a><a href="05-bias-arah-struktur.html">5. Bias, Arah, Struktur</a><a href="06-multi-candle-timeframe.html">6. Multi-Candle & TF</a></div></div>
+      <div class="sidebar-section" data-section="eksekusi"><button type="button" class="sidebar-section-title">III · Eksekusi <span class="chevron">▶</span></button><div class="sidebar-section-links"><a href="07-entry-exit.html">7. Entry & Exit</a><a href="08-manajemen-risiko.html">8. Manajemen Risiko</a><a href="09-contoh-kasus.html">9. Contoh Kasus</a></div></div>
+      <div class="sidebar-section" data-section="alat"><button type="button" class="sidebar-section-title">IV · Alat & Disiplin <span class="chevron">▶</span></button><div class="sidebar-section-links"><a href="10-tool-visualizer.html">10. Tool Visualizer</a><a href="11-checklist-harian.html">11. Checklist Harian</a><a href="12-glosarium.html">12. Glosarium</a></div></div>
+      <div class="sidebar-section" data-section="finansial"><button type="button" class="sidebar-section-title">V · Finansial <span class="chevron">▶</span></button><div class="sidebar-section-links"><a href="13-nasihat-investasi.html">13. Nasihat Investasi</a><a href="14-jurnal-trading.html">14. Jurnal Trading</a><a href="15-mengelola-keuntungan.html">15. Mengelola Keuntungan</a></div></div>
+    </aside>
+    <main class="main">
+      <div class="badge">BAB 3 · FONDASI</div>
+      <h1>Parameter TABRANIJ</h1>
+      <blockquote>Definisi final: titik <strong>TARI</strong> dan empat <strong>rentang</strong>.</blockquote>
+      <h2>3.1 Asal-usul nama</h2>
+      <p><strong>TABRANIJ</strong> disusun agar mudah dihafal. Empat titik diikat sebagai <strong>TARI</strong>:</p>
+      <pre>TARI = Tinggi · Awal · Rendah · Inti</pre>
+      <h2>3.2 Tabel master</h2>
+      <h3>Titik — TARI</h3>
+      <table><thead><tr><th>Kode</th><th>Komponen</th><th>Keterangan</th></tr></thead><tbody>
+        <tr><td><strong>T</strong></td><td>Tinggi</td><td>Harga tertinggi periode</td></tr>
+        <tr><td><strong>A</strong></td><td>Awal</td><td>Harga pembukaan</td></tr>
+        <tr><td><strong>R</strong></td><td>Rendah</td><td>Harga terendah periode</td></tr>
+        <tr><td><strong>I</strong></td><td>Inti</td><td>Harga sekarang / penutupan</td></tr>
+      </tbody></table>
+      <h3>Rentang</h3>
+      <table><thead><tr><th>Kode</th><th>Komponen</th><th>Rumus</th></tr></thead><tbody>
+        <tr><td><strong>A</strong></td><td>Atas</td><td><code>T − max(Awal, I)</code></td></tr>
+        <tr><td><strong>B</strong></td><td>Bawah</td><td><code>min(Awal, I) − R</code></td></tr>
+        <tr><td><strong>N</strong></td><td>Neto</td><td><code>|I − Awal|</code></td></tr>
+        <tr><td><strong>J</strong></td><td>Julat</td><td><code>T − R</code></td></tr>
+      </tbody></table>
+      <pre>Julat = Atas + Neto + Bawah</pre>
+      <h2>3.3 Dua huruf “A”</h2>
+      <p>Selalu sebut <strong>Awal</strong> atau <strong>Atas</strong>, jangan hanya “A”.</p>
+      <h2>3.4 Urutan kerja</h2>
+      <ol><li>Catat TARI</li><li>Hitung Atas, Bawah, Neto, Julat</li><li>Verifikasi identitas</li><li>Tentukan bias (I vs Awal)</li></ol>
+      <div class="nav-bottom"><a href="02-konsep-gt.html">← Bab 2</a><a href="04-membaca-candle.html">Bab 4 →</a></div>
+      <footer class="page-footer"><p><a href="index.html">TABRANIJ</a> · Metode GT · Surga Bot</p></footer>
+    </main>
   </div>
+  <script>
+    document.querySelectorAll('.sidebar-section-title').forEach(btn => { if (btn.tagName !== 'BUTTON') return; btn.addEventListener('click', () => btn.closest('.sidebar-section').classList.toggle('open')); });
+    const active = document.querySelector('.sidebar a.active'); if (active) { const sec = active.closest('.sidebar-section'); if (sec) sec.classList.add('open'); }
+  </script>
 </body>
 </html>

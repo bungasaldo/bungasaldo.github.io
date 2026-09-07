@@ -44,7 +44,7 @@ html, body {
 .sidebar-brand {
   padding: 0 1.25rem 1.25rem;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
 }
 
 .sidebar-brand a {
@@ -64,24 +64,58 @@ html, body {
 }
 
 .sidebar-section {
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.25rem;
 }
 
 .sidebar-section-title {
-  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  padding: 0.4rem 1.25rem;
+  padding: 0.55rem 1.25rem;
+  cursor: pointer;
+  user-select: none;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: inherit;
+  transition: color 0.15s;
+}
+
+.sidebar-section-title:hover {
+  color: var(--text);
+}
+
+.sidebar-section-title .chevron {
+  font-size: 0.65rem;
+  transition: transform 0.2s ease;
+  opacity: 0.7;
+}
+
+.sidebar-section.open .sidebar-section-title .chevron {
+  transform: rotate(90deg);
+}
+
+.sidebar-section-links {
+  display: none;
+  padding-bottom: 0.35rem;
+}
+
+.sidebar-section.open .sidebar-section-links {
+  display: block;
 }
 
 .sidebar a {
   display: block;
-  padding: 0.38rem 1.25rem;
+  padding: 0.36rem 1.25rem 0.36rem 1.6rem;
   color: var(--muted);
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   border-left: 2px solid transparent;
   transition: color 0.15s, background 0.15s, border-color 0.15s;
 }
@@ -253,7 +287,7 @@ footer.page-footer a { color: var(--accent2); text-decoration: none; }
     min-width: 100%;
     border-right: none;
     border-bottom: 1px solid var(--border);
-    max-height: 42vh;
+    max-height: 48vh;
   }
   .layout { flex-direction: column; }
   .main {

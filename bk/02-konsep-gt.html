@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bab 2 — Konsep Metode GT | TABRANIJ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="top">
+      <a href="index.html">← TABRANIJ Buku Pegangan</a>
+      <a href="https://github.com/surgabot/bk">Repo</a>
+    </nav>
+
+    <div class="badge">BAB 2 · FONDASI</div>
+    <h1>Konsep Metode GT</h1>
+
+    <h2>2.1 GT, TABRANIJ, dan TARI</h2>
+    <p><strong>GT</strong> = <strong>Grafik Tabranij</strong>.</p>
+    <p>Sistem baca mengikuti kode <strong>TABRANIJ</strong>, dengan empat <strong>titik</strong> yang dihafal sebagai <strong>TARI</strong>:</p>
+<pre>T A B R A N I J
+│   │ │ │ │ │ └─ Julat   (rentang penuh)
+│   │ │ │ │ └─── Inti    (titik · variabel)     ─┐
+│   │ │ │ └───── Neto    (rentang body)           │ TARI
+│   │ │ └─────── Awal    (titik · konstanta)    ─┤ (titik:
+│   │ └───────── Rendah  (titik)                 ─┤  T, Awal,
+│   └─────────── Bawah   (rentang wick bawah)     │  R, Inti)
+└─────────────── Tinggi  (titik)                 ─┘
+                 Atas    (rentang wick atas)</pre>
+    <p>Catatan: dalam urutan huruf TABRANIJ, <strong>A</strong> muncul dua kali — <strong>Atas</strong> (rentang) dan <strong>Awal</strong> (titik). Saat bicara, sebut lengkap agar tidak ambigu.</p>
+
+    <h2>2.2 Titik dulu, baru rentang</h2>
+    <p>Alur baca yang disarankan:</p>
+    <ol>
+      <li>Isi <strong>TARI</strong> — Tinggi, Awal, Rendah, Inti</li>
+      <li>Hitung <strong>rentang</strong>:
+        <ul>
+          <li>Atas = <code>T − max(Awal, I)</code></li>
+          <li>Bawah = <code>min(Awal, I) − R</code></li>
+          <li>Neto = <code>|I − Awal|</code></li>
+          <li>Julat = <code>T − R</code></li>
+        </ul>
+      </li>
+      <li>Cek identitas: <code>Atas + Neto + Bawah = Julat</code></li>
+      <li>Tentukan bias dari Inti vs Awal</li>
+    </ol>
+
+    <h2>2.3 Visual satu periode</h2>
+<pre>T ───────────────  Tinggi (titik)
+    ║ Atas         rentang wick atas
+────╫────────────  max(Awal, I)
+    ║ Neto         rentang body
+────╫────────────  min(Awal, I)
+    ║ Bawah        rentang wick bawah
+R ───────────────  Rendah (titik)
+
+Awal · Inti = dua ujung body (titik)
+Julat       = T − R = Atas + Neto + Bawah</pre>
+
+    <h2>2.4 Definisi matematis final</h2>
+    <h3>Titik — TARI</h3>
+    <table>
+      <thead><tr><th>Kode</th><th>Komponen</th><th>Keterangan</th></tr></thead>
+      <tbody>
+        <tr><td><strong>T</strong></td><td>Tinggi</td><td>Harga tertinggi periode</td></tr>
+        <tr><td><strong>A</strong></td><td>Awal</td><td>Harga pembukaan</td></tr>
+        <tr><td><strong>R</strong></td><td>Rendah</td><td>Harga terendah periode</td></tr>
+        <tr><td><strong>I</strong></td><td>Inti</td><td>Harga sekarang / penutupan</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Rentang</h3>
+    <table>
+      <thead><tr><th>Kode</th><th>Komponen</th><th>Rumus</th><th>Keterangan</th></tr></thead>
+      <tbody>
+        <tr><td><strong>A</strong></td><td>Atas</td><td><code>T − max(Awal, I)</code></td><td>Wick atas</td></tr>
+        <tr><td><strong>B</strong></td><td>Bawah</td><td><code>min(Awal, I) − R</code></td><td>Wick bawah</td></tr>
+        <tr><td><strong>N</strong></td><td>Neto</td><td><code>|I − Awal|</code></td><td>Lebar body</td></tr>
+        <tr><td><strong>J</strong></td><td>Julat</td><td><code>T − R</code></td><td>Range penuh</td></tr>
+      </tbody>
+    </table>
+
+    <h2>2.5 Bias</h2>
+    <table>
+      <thead><tr><th>Kondisi</th><th>Bias</th></tr></thead>
+      <tbody>
+        <tr><td><code>I ≥ Awal</code></td><td>Naik / Bullish</td></tr>
+        <tr><td><code>I < Awal</code></td><td>Turun / Bearish</td></tr>
+      </tbody>
+    </table>
+    <p>Body mengarah dari <strong>Awal → Inti</strong>. Neto hanya mengukur <strong>besar</strong> body, bukan arah.</p>
+
+    <h2>2.6 Ringkasan konsep</h2>
+    <ol>
+      <li><strong>TARI</strong> = empat titik wajib.</li>
+      <li><strong>Atas, Bawah, Neto, Julat</strong> = empat rentang.</li>
+      <li><code>Julat = Atas + Neto + Bawah</code>.</li>
+      <li>Bias dari perbandingan Inti vs Awal.</li>
+      <li>Tool dan bab berikutnya mengikuti definisi ini.</li>
+    </ol>
+
+    <div class="nav-bottom">
+      <a href="01-pengenalan.html">← Bab 1 — Pengenalan</a>
+      <a href="03-parameter-tabranij.html">Bab 3 — Parameter TABRANIJ →</a>
+    </div>
+
+    <footer>
+      <p><a href="index.html">TABRANIJ</a> · Metode GT · <a href="https://github.com/surgabot">Surga Bot</a></p>
+    </footer>
+  </div>
+</body>
+</html>
